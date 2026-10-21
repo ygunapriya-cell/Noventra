@@ -1,0 +1,244 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Classic Leather Messenger Bag",
+      "price": 49.99,
+      "description": "A premium-style messenger bag with multiple compartments for work, travel, and everyday essentials.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+      "rating": {
+        "rate": 4.5,
+        "count": 180
+      }
+    },
+    {
+      "id": "2",
+      "title": "Men's Lightweight Running Sneakers",
+      "price": 59.99,
+      "description": "Lightweight sneakers designed for comfortable walking, jogging, and everyday activities.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+      "rating": {
+        "rate": 4.3,
+        "count": 215
+      }
+    },
+    {
+      "id": "3",
+      "title": "Men's Casual Denim Shirt",
+      "price": 34.50,
+      "description": "A versatile denim shirt with a button-front design for casual outings and weekend wear.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
+      "rating": {
+        "rate": 4.2,
+        "count": 145
+      }
+    },
+    {
+      "id": "24",
+      "title": "Men's Classic Polo T-Shirt",
+      "price": 24.99,
+      "description": "A timeless polo shirt with a collar and button placket, suitable for casual and smart-casual outfits.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+      "rating": {
+        "rate": 4.6,
+        "count": 320
+      }
+    },
+    {
+      "id": "25",
+      "title": "Women's Floral Summer Dress",
+      "price": 42.99,
+      "description": "A lightweight floral dress with a relaxed silhouette, ideal for summer outings and special occasions.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png",
+      "rating": {
+        "rate": 4.4,
+        "count": 210
+      }
+    },
+    {
+      "id": "26",
+      "title": "Women's High-Waist Casual Trousers",
+      "price": 35.99,
+      "description": "Comfortable high-waist trousers that pair easily with shirts, tops, and everyday outfits.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png",
+      "rating": {
+        "rate": 4.1,
+        "count": 165
+      }
+    },
+    {
+      "id": "27",
+      "title": "Women's Knitted Cardigan",
+      "price": 39.50,
+      "description": "A soft knitted cardigan that adds a comfortable extra layer to casual and office outfits.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2_t.png",
+      "rating": {
+        "rate": 4.3,
+        "count": 190
+      }
+    },
+    {
+      "id": "28",
+      "title": "Women's Everyday Cotton Blouse",
+      "price": 21.99,
+      "description": "A versatile cotton blouse with a simple design for comfortable everyday styling.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png",
+      "rating": {
+        "rate": 4.0,
+        "count": 125
+      }
+    },
+    {
+      "id": "29",
+      "title": "Minimalist Stainless Steel Necklace",
+      "price": 18.99,
+      "description": "A minimalist stainless steel necklace designed to complement casual and formal outfits.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png",
+      "rating": {
+        "rate": 4.5,
+        "count": 240
+      }
+    },
+    {
+      "id": "30",
+      "title": "Classic Gold-Tone Hoop Earrings",
+      "price": 14.99,
+      "description": "Elegant gold-tone hoop earrings with a versatile design for everyday wear and occasions.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png",
+      "rating": {
+        "rate": 4.2,
+        "count": 175
+      }
+    },
+    {
+      "id": "31",
+      "title": "Elegant Silver-Tone Pendant",
+      "price": 26.99,
+      "description": "A delicate pendant necklace with a polished silver-tone finish for a refined look.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png",
+      "rating": {
+        "rate": 4.6,
+        "count": 130
+      }
+    },
+    {
+      "id": "32",
+      "title": "Vintage-Inspired Statement Ring",
+      "price": 19.50,
+      "description": "A decorative statement ring with a vintage-inspired look that complements a range of styles.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
+      "rating": {
+        "rate": 4.1,
+        "count": 98
+      }
+    },
+    {
+      "id": "33",
+      "title": "Wireless Bluetooth Headphones",
+      "price": 79.99,
+      "description": "Wireless over-ear headphones designed for music, video calls, and everyday listening.",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png",
+      "rating": {
+        "rate": 4.7,
+        "count": 520
+      }
+    },
+    {
+      "id": "34",
+      "title": "Portable Bluetooth Speaker",
+      "price": 45.99,
+      "description": "A compact portable speaker for listening to music at home, outdoors, or while traveling.",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png",
+      "rating": {
+        "rate": 4.4,
+        "count": 285
+      }
+    },
+    {
+      "id": "35",
+      "title": "USB-C Multiport Adapter",
+      "price": 29.99,
+      "description": "A compact USB-C adapter designed to connect compatible devices to additional peripherals.",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png",
+      "rating": {
+        "rate": 4.3,
+        "count": 160
+      }
+    },
+    {
+      "id": "36",
+      "title": "Mechanical Gaming Keyboard",
+      "price": 89.99,
+      "description": "A gaming keyboard designed for responsive typing, gaming sessions, and desktop productivity.",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png",
+      "rating": {
+        "rate": 4.6,
+        "count": 410
+      }
+    },
+    {
+      "id": "37",
+      "title": "Adjustable Laptop Stand",
+      "price": 32.99,
+      "description": "An adjustable laptop stand that helps create a more comfortable desk setup for work and study.",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png",
+      "rating": {
+        "rate": 4.5,
+        "count": 230
+      }
+    },
+    {
+      "id": "38",
+      "title": "Wireless Optical Mouse",
+      "price": 19.99,
+      "description": "A wireless optical mouse with a compact design for everyday computer use and travel.",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png",
+      "rating": {
+        "rate": 4.2,
+        "count": 340
+      }
+    },
+    {
+      "id": "39",
+      "title": "Women's Lightweight Windbreaker",
+      "price": 31.99,
+      "description": "A lightweight windbreaker designed for outdoor walks, travel, and unpredictable weather.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
+      "rating": {
+        "rate": 4.3,
+        "count": 155
+      }
+    },
+    {
+      "id": "40",
+      "title": "Men's Everyday Zip-Up Jacket",
+      "price": 44.99,
+      "description": "A practical zip-up jacket with a clean design for layering during everyday activities.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+      "rating": {
+        "rate": 4.4,
+        "count": 205
+      }
+    }
+  ]
+}
