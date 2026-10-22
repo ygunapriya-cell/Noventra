@@ -27,7 +27,7 @@
     {
       "id": "3",
       "title": "Men's Casual Denim Shirt",
-      "price": 34.50,
+      "price": 34.5,
       "description": "A versatile denim shirt with a button-front design for casual outings and weekend wear.",
       "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
@@ -73,18 +73,6 @@
       }
     },
     {
-      "id": "27",
-      "title": "Women's Knitted Cardigan",
-      "price": 39.50,
-      "description": "A soft knitted cardigan that adds a comfortable extra layer to casual and office outfits.",
-      "category": "women's clothing",
-      "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2_t.png",
-      "rating": {
-        "rate": 4.3,
-        "count": 190
-      }
-    },
-    {
       "id": "28",
       "title": "Women's Everyday Cotton Blouse",
       "price": 21.99,
@@ -92,7 +80,7 @@
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png",
       "rating": {
-        "rate": 4.0,
+        "rate": 4,
         "count": 125
       }
     },
@@ -135,7 +123,7 @@
     {
       "id": "32",
       "title": "Vintage-Inspired Statement Ring",
-      "price": 19.50,
+      "price": 19.5,
       "description": "A decorative statement ring with a vintage-inspired look that complements a range of styles.",
       "category": "jewelery",
       "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
@@ -240,5 +228,6 @@
         "count": 205
       }
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

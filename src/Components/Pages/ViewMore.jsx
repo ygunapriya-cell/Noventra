@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
-
 const ViewMore = () => {
   const params = useParams();
   const prodid = params.id;
@@ -14,28 +13,31 @@ const ViewMore = () => {
       `http://localhost:4000/products/${prodid}`,
     );
     setProduct(apiresid.data);
-    toast.success("Data Found")
+    toast.success("Data Found");
   };
   useEffect(() => {
     viewmorecall();
   }, []);
 
-  let { id, title, price, image,rating ,category, description } = product;
+  let {id,  title, price, image, rating, category, description } = product;
 
   const navi = useNavigate();
   const close = () => {
     navi("/adminprotal/product");
   };
-  let deleteproduct = async (id) =>{
-    let bool = window.confirm('Do you want to delete this product')
+ 
+  let deleteproduct = async (id) => {
+    let bool = window.confirm(`Do you want to delete this item ? `)
     if(bool){
       await axios.delete(`http://localhost:4000/products/${id}`)
-      toast.error('Product is not Deleted');
-      Navigate(`/adminprotal/product`)
-    }else{
-      toast.warn('Not Deleted')
+      toast.error("Product deleted")
+      navi(`/adminprotal/product`)
     }
-  }
+    else{
+      toast.warn("Product not Deleted")
+    }
+    
+  };
 
   return (
     <div className="viewmore">
@@ -61,7 +63,7 @@ const ViewMore = () => {
             <div className="price">Rs. {Math.round(price * 90)}.00</div>
           </div>
           <div className="btn">
-            <button onClick={deleteproduct}>Delete</button>
+            <button onClick={()=>deleteproduct(id)}>Delete</button>
           </div>
         </div>
       </div>

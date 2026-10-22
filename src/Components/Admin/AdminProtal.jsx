@@ -5,6 +5,7 @@ import Product from "../Pages/Product";
 import Navbar from "../Navbar";
 import ViewMore from "../Pages/ViewMore";
 import AddProduct from '../Pages/AddProduct'
+import UsersRegisterationForm from "./UsersRegisterationForm";
 
 const AdminProtal = () => {
   return (
@@ -15,6 +16,7 @@ const AdminProtal = () => {
         <Route element={<Product />} path="/product" />
         <Route element={<ViewMore/>} path="/viewmore/:id"/>
        <Route element={<AddProduct/>} path="/addproduct"/>
+       <Route element={<UsersRegisterationForm/>} path="/register"/>
 
       </Routes>
     </>
