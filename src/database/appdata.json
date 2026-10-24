@@ -229,5 +229,43 @@
       }
     }
   ],
+  "users": [
+    {
+      "id": "emRMSMzxovY",
+      "username": "priya",
+      "contact": "56544333353",
+      "email": "priya@gmail.com",
+      "Password": "priya123",
+      "DOb": "2013-01-08",
+      "place": "Goa"
+    },
+    {
+      "id": "919XLYuXYFQ",
+      "username": "Guna",
+      "contact": "8767554465",
+      "email": "ygunapriya@gmail.com",
+      "Password": "654554",
+      "DOb": "2026-10-14",
+      "place": "bidadi"
+    },
+    {
+      "id": "W9y-pbjAuA0",
+      "username": "Madhu",
+      "contact": "87675656543",
+      "email": "madhu@gmail.com",
+      "Password": "65453343",
+      "DOb": "2011-01-04",
+      "place": "Abk"
+    },
+    {
+      "id": "BYoA_7w7KEI",
+      "username": "Varsha",
+      "contact": "0808665444",
+      "email": "ygunapriya@gmail.com",
+      "Password": "7564453",
+      "DOb": "2004-10-04",
+      "place": "Goa"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
