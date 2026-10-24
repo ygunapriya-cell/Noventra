@@ -16,7 +16,7 @@ const UsersRegisterationForm = () => {
   let allusersemail = usersdata.map((elem) => {
     return elem.email;
   });
-  console.log(allusersemail);
+  // console.log(allusersemail);
   // todo : collect  input value and update
   let [users, setusers] = useState({
     id: "",
@@ -30,7 +30,7 @@ const UsersRegisterationForm = () => {
   let handleInput = (e) => {
     let key = e.target.name;
     let val = e.target.value;
-    // console.log(key,val);
+    console.log(key,val);
     setusers({
       ...users,
       [key]: val,
@@ -54,7 +54,7 @@ const UsersRegisterationForm = () => {
         <div className="container">
           <form onSubmit={handlesubmit}>
             <label>
-              username :
+              <span>username :</span>
               <input
                 type="text"
                 onChange={handleInput}
@@ -65,7 +65,9 @@ const UsersRegisterationForm = () => {
             </label>
 
             <label>
-              Contact :
+             <span>
+               Contact :
+             </span>
               <input
                 type="tel"
                 onChange={handleInput}
@@ -76,7 +78,9 @@ const UsersRegisterationForm = () => {
             </label>
 
             <label>
-              Email :
+              <span>
+                Email :
+              </span>
               <input
                 type="email"
                 onChange={handleInput}
@@ -87,7 +91,10 @@ const UsersRegisterationForm = () => {
             </label>
 
             <label>
-              Password :
+              <span>
+                Password :
+              </span>
+
               <input
                 type="password"
                 onChange={handleInput}
@@ -98,7 +105,9 @@ const UsersRegisterationForm = () => {
             </label>
 
             <label>
-              DOb :
+              <span>
+                DOB :
+              </span>
               <input
                 type="date"
                 onChange={handleInput}
@@ -109,7 +118,9 @@ const UsersRegisterationForm = () => {
             </label>
 
             <label>
-              Place :
+             <span>
+               Place :
+             </span>
               <input
                 type="place"
                 onChange={handleInput}
@@ -118,7 +129,9 @@ const UsersRegisterationForm = () => {
                 required
               />
             </label>
-            <button> Register</button>
+            <div className="btn">
+              <button> Register</button>
+            </div>
           </form>
         </div>
       </div>

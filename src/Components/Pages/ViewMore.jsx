@@ -58,7 +58,7 @@ const ViewMore = () => {
           <div className="rateandprice">
             <div className="rate">
               <h5>Rating</h5>
-              <h6>{rating?.rate}</h6>
+              <h6>{rating?.rate} ⭐</h6>
             </div>
             <div className="price">Rs. {Math.round(price * 90)}.00</div>
           </div>
