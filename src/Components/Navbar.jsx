@@ -1,9 +1,17 @@
 import React from 'react'
 import '../App.css'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import AdminNavbar from './Admin/AdminNavbar'
+import UsersNavbar from './Users/UsersNavbar'
 
 
 const Navbar = () => {
+    // uselocation is hook which is present in react -router-dom ,It is used to target the location/path of the cpmonents & it return  location object
+    const location = useLocation()
+    let path = location.pathname
+    let bool = path.startsWith("/adminprotal")
+    
+
   return (
     <>
     <div className="navbar">
@@ -11,16 +19,12 @@ const Navbar = () => {
             <img src="../Image/logo.png" alt="no image" />
         </div>
         <div className="links">
-            <ul>
-                <li><NavLink to ="/adminprotal">Home</NavLink></li>
-                <li><NavLink to = "/adminprotal/product">Product</NavLink></li>
-                 <li><NavLink to="/adminprotal/addproduct">Add Product</NavLink></li>
-                <li><NavLink to="/adminprotal/register">User register</NavLink></li>
-                <li><a href="">items4</a></li>
-                <li><a href="">items5</a></li>
-                <li><a href="">items6</a></li>
-                
-            </ul>
+            { bool
+             ? 
+             <AdminNavbar/>
+             : <UsersNavbar/>
+            
+            }
         </div>
     </div>
       

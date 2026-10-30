@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Product = () => {
   let [product, setproduct] = useState([]);
@@ -17,10 +17,19 @@ const Product = () => {
   }, []);
 
   const navigate = useNavigate();
+  const location = useLocation();
+   let bool = location.pathname.startsWith( '/adminprotal')
+   let viewmore = (productId, title) =>{
+   
+    bool 
+    ?   navigate(`/adminprotal/viewmore/${productId}`)
+    :   navigate(`/usersprotal/viewmore/${productId}`);
+   }
 
-  const viewmore = (productid) => {
-    navigate(`/adminprotal/viewmore/${productid}`);
-  };
+
+  // const viewmore = (productid) => {
+  //   navigate(`/adminprotal/viewmore/${productid}`);
+  // };
 
   // category
   let categoryArray = [

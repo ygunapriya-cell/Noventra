@@ -1,10 +1,15 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const UsersRegisterationForm = () => {
-  // todo : API fetching  of users
+ 
   let [usersdata, setusersdata] = useState([]);
+  let errmz = useRef();
+  let navigate = useNavigate();
+
+   // todo : API fetching  of users
   let fetchapi = async () => {
     let usersapi = await axios.get(`http://localhost:4000/users`);
     setusersdata(usersapi.data);
@@ -27,10 +32,11 @@ const UsersRegisterationForm = () => {
     DOb: "",
     place: "",
   });
+ 
   let handleInput = (e) => {
     let key = e.target.name;
     let val = e.target.value;
-    console.log(key,val);
+    console.log(key, val);
     setusers({
       ...users,
       [key]: val,
@@ -39,10 +45,32 @@ const UsersRegisterationForm = () => {
 
   let handlesubmit = async (e) => {
     e.preventDefault();
-    // console.log(users)
+
     try {
-      await axios.post("http://localhost:4000/users", users);
-      toast.success(`Users is registered`);
+      let emailInput = users.email;
+      let bool = allusersemail.includes(emailInput);
+      if (bool) {
+        let err = "email is already exist";
+        toast.error(err);
+        errmz.current.innerText = err;
+        e.target[2].style.border = "solid 2px red";
+      } else {
+        alert("Welcome");
+        errmz.current.innerText = "";
+        e.target[2].style.border = "none";
+        await axios.post("http://localhost:4000/users", users);
+        toast.success(`Users is registered`);
+        setusers({
+          id: "",
+          username: "",
+          contact: "",
+          email: "",
+          Password: "",
+          DOb: "",
+          place: "",
+        });
+         navigate(`/adminprotal/usersdetalies`)
+      }
     } catch (error) {
       toast.error(`Users is not registered : ${error}`);
     }
@@ -50,7 +78,12 @@ const UsersRegisterationForm = () => {
   return (
     <>
       <div className="regsiter">
-        <h1>Registeration Form</h1>
+       <div className="hesder">
+         <h1>Registeration Form</h1>
+         <button onClick={()=>navigate(`/adminprotal/usersdetalies`)}>
+          Registered Users
+           </button>
+       </div>
         <div className="container">
           <form onSubmit={handlesubmit}>
             <label>
@@ -65,9 +98,7 @@ const UsersRegisterationForm = () => {
             </label>
 
             <label>
-             <span>
-               Contact :
-             </span>
+              <span>Contact :</span>
               <input
                 type="tel"
                 onChange={handleInput}
@@ -78,9 +109,7 @@ const UsersRegisterationForm = () => {
             </label>
 
             <label>
-              <span>
-                Email :
-              </span>
+              <span>Email :</span>
               <input
                 type="email"
                 onChange={handleInput}
@@ -89,11 +118,10 @@ const UsersRegisterationForm = () => {
                 required
               />
             </label>
+            <div ref={errmz} style={{ color: "red", textAlign: "right" }}></div>
 
             <label>
-              <span>
-                Password :
-              </span>
+              <span>Password :</span>
 
               <input
                 type="password"
@@ -105,9 +133,7 @@ const UsersRegisterationForm = () => {
             </label>
 
             <label>
-              <span>
-                DOB :
-              </span>
+              <span>DOB :</span>
               <input
                 type="date"
                 onChange={handleInput}
@@ -118,9 +144,7 @@ const UsersRegisterationForm = () => {
             </label>
 
             <label>
-             <span>
-               Place :
-             </span>
+              <span>Place :</span>
               <input
                 type="place"
                 onChange={handleInput}

@@ -6,6 +6,8 @@ import Navbar from "../Navbar";
 import ViewMore from "../Pages/ViewMore";
 import AddProduct from '../Pages/AddProduct'
 import UsersRegisterationForm from "./UsersRegisterationForm";
+import RegisteredUsers from "./RegisteredUsers";
+import PageNotFound from "../Pages/PageNotFound";
 
 const AdminProtal = () => {
   return (
@@ -17,6 +19,9 @@ const AdminProtal = () => {
         <Route element={<ViewMore/>} path="/viewmore/:id"/>
        <Route element={<AddProduct/>} path="/addproduct"/>
        <Route element={<UsersRegisterationForm/>} path="/register"/>
+       <Route element={<RegisteredUsers/>} path="/usersdetalies"/>
+
+        <Route element={<PageNotFound/>} path='*'/>
 
       </Routes>
     </>

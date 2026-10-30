@@ -1473,9 +1473,20 @@ hopmoree {
 /* usersregister */
 
 .regsiter {
-  h1 {
+  
+  .hesder{
+    h1 {
     text-align: center;
     margin-top: 5vh;
+   }
+  button{
+    background-color: #10b981;
+    color: white;
+    border-radius: 10px;
+    height: 20px;
+    width: 10%;
+  }
+
   }
 
   .container {
@@ -1546,88 +1557,137 @@ hopmoree {
   }
 }
 
-/* Registration Page */
-/* .regsiter {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 15px;
-  background: linear-gradient(135deg, #e0e7ff, #f5e8ff);
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
-}
+/* RegisteredUsers* */
 
-/* Heading */
-/* .regsiter h1 {
-  color: #312e81;
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 25px;
-}
+.registered-users{
+  .container{
+    width: 100%;
+    height: 100%;
+    padding-right: 50%;
+    padding-left: 20%;
+    padding-top: 10%;
+    row-gap: 20%;
 
-/* Form Container */
-/* .regsiter .container {
-  width: 100%;
-  max-width: 500px;
-  padding: 35px;
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(49, 46, 129, 0.15);
-  box-sizing: border-box; */
-/* }
+    table{
+      background-color: #059669;
+      color: black;
+       justify-content: center;
+     
+      margin-top: 20px;
+     
 
-Form Layout
-.regsiter form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+      thead{
+        margin: auto;
+        
+        tr{
+           align-items: center;
+          th{
+           
+            
 
-/* Labels */
-/* .regsiter label {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  color: #374151;
-  font-size: 15px;
-  font-weight: 600;
-}  */
-
-/* Input Fields */
-/* .regsiter input {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  outline: none;
-  font-size: 15px;
-  box-sizing: border-box;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-/* Input Focus */
-/* .regsiter input:focus {
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
-}
-
-/* Responsive Design */
-/* @media (max-width: 480px) {
-  .regsiter {
-    padding: 20px 12px;
-  } */
-*/
-/* 
-  .regsiter h1 {
-    font-size: 25px;
-  }
-
-  .regsiter .container {
-    padding: 22px 18px;
+          }
+        }
+      }
+    }
   }
 } 
 
- */
-*/
+
+/* Registered Users Page */
+/* .registered-users {
+    min-height: 100vh;
+    background: #f4f6fb;
+    padding: 40px 20px;
+    box-sizing: border-box;
+} */
+
+/* Container */
+/* .registered-users .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+} */
+
+/* Table */
+/* .registered-users table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333333;
+} */
+
+/* Table Heading */
+/* .registered-users thead {
+    background: #26354d;
+    color: white;
+} */
+
+/* .registered-users th {
+    padding: 15px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+} */
+
+/* Table Data */
+/* .registered-users td {
+    padding: 13px 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e7eb;
+} */
+
+/* Alternate Row Colors */
+/* .registered-users tbody tr:nth-child(even) {
+    background: #f8fafc;
+} */
+
+/* Hover Effect */
+/* .registered-users tbody tr:hover {
+    background: #eaf1ff;
+    transition: background 0.3s ease;
+} */
+
+/* Delete Button */
+/* .registered-users button {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+} */
+
+/* Delete Button Hover */
+/* .registered-users button:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(230, 57, 70, 0.2);
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registered-users {
+        padding: 20px 10px;
+    }
+
+    .registered-users .container {
+        padding: 12px;
+    }
+
+    .registered-users th,
+    .registered-users td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+}

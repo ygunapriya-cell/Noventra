@@ -1,11 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const ViewMore = () => {
   const params = useParams();
   const prodid = params.id;
+
+  const location = useLocation()
+  const bool = location.pathname.startsWith('/adminprotal/')
 
   const [product, setProduct] = useState({});
   const viewmorecall = async () => {
@@ -23,7 +26,8 @@ const ViewMore = () => {
 
   const navi = useNavigate();
   const close = () => {
-    navi("/adminprotal/product");
+     bool ? navi("/adminprotal/product") : Navigate('/usersprotal/product');
+     toast.info("All products")
   };
  
   let deleteproduct = async (id) => {
@@ -63,7 +67,13 @@ const ViewMore = () => {
             <div className="price">Rs. {Math.round(price * 90)}.00</div>
           </div>
           <div className="btn">
+           {bool ? 
             <button onClick={()=>deleteproduct(id)}>Delete</button>
+            : 
+            <button className="cart">
+             Add to cart
+            </button>
+           }
           </div>
         </div>
       </div>
