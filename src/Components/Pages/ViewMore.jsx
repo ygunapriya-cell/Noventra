@@ -43,6 +43,23 @@ const ViewMore = () => {
     
   };
 
+  // add to cart 
+
+  let add = async (id) =>{
+    try {
+      let bool = confirm(`Do you want to add the product ${id}`)
+      if(bool){
+        await axios.post('http://localhost:4000/cart' , product)
+        toast.success("product added")
+      }
+      else{
+        toast.error('product not added')
+      }
+    } catch (error) {
+      toast.error(error)
+    }
+  }
+
   return (
     <div className="viewmore">
       <div className="card">
@@ -70,7 +87,7 @@ const ViewMore = () => {
            {bool ? 
             <button onClick={()=>deleteproduct(id)}>Delete</button>
             : 
-            <button className="cart">
+            <button className="cart" onClick={()=>add(id)}>
              Add to cart
             </button>
            }

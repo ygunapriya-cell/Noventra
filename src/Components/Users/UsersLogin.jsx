@@ -43,13 +43,15 @@ let [formData,setformData] = useState({emailfield : "",passwordfield:""})
     let successBoarder = 'solid 2px green'
     let errorBoarder = 'solid 2px red'
     if(emailIndex !== -1){
-      let userPassword = userdata[emailIndex].password
+      let userPassword = userdata[emailIndex].Password
       if(passwordfield === userPassword){
         toast.success("Welcome")
          e.target[1].style.border =successBoarder
          navigate('/usersprotal')
       }else{
         toast.error("Password is Invaild")
+        console.log(passwordfield , userPassword);
+        
          e.target[1].style.border =errorBoarder
       }
     }else{

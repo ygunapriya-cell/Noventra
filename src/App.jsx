@@ -11,8 +11,8 @@ const App = () => {
     <>
       <Routes>
         <Route element={<LandingPage/>} path='/'/>
-        <Route element={<AdminProtal />} path='adminprotal/*'/>  
-        <Route element={<UsersProtal/>} path='usersprotal/*'/>
+        <Route element={<AdminProtal />} path='/adminprotal/*'/>  
+        <Route element={<UsersProtal/>} path='/usersprotal/*'/>
         
         <Route element={<PageNotFound/>} path='*'/>
         
