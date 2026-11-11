@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AdminLogin from "./Admin/AdminLogin";
 import UsersLogin from "./Users/UsersLogin";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import loginBackground from "../assets/Images/loginBackground.jpg";
 
 const LandingPage = () => {
@@ -27,6 +27,7 @@ const LandingPage = () => {
                 <AdminLogin />
                 <div className="forgotpass">
                   <Link>Forgot Password</Link>
+                  <button><NavLink to="/portalregister">User Register</NavLink></button>
                 </div>
               </div>
 

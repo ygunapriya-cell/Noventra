@@ -11,20 +11,28 @@ const Cart = () => {
   useEffect(() => {
     apifetch();
   }, []);
-  let total =0
+  let total = 0;
+  
 
   // delete the product
 
-  const del = async(id)=>{
-   let bool= confirm("do you really wnat to delete this product")
-    if(bool){
-        await axios.delete(`http://localhost:4000/cart/${id}`)
-        toast.success("data deleted")
+  const del = async (id) => {
+    try {
+      let bool = confirm(`Do you want to Delete these products`)
+      if(bool){
+      await axios.delete(`http://localhost:4000/cart/${id}`)
+      toast.success("product deleted")
+      setTimeout(() => {
+        apifetch()  
+      }, 800);
+      }else{
+        toast.error('Product is not deleted')
+
+      }
+    } catch (error) {
+      toast.error(`${error} is the code`)
     }
-    else(
-        toast.error('data is not deleted')
-    )
-  }
+  };
   return (
     <div className="cart">
       <h1>Selected items</h1>
@@ -43,18 +51,18 @@ const Cart = () => {
         <tbody>
           {Product.map((elem, index) => {
             let { id, title, price, category, image, rating } = elem;
-            total+=Math.round(price*95)
+            total += Math.round(price * 95);
             return (
               <tr key={index}>
                 <th>{index + 1}</th>
                 <td>{title}</td>
                 <td className="image">
-                    <img src={image} alt="" />
+                  <img src={image} alt="" />
                 </td>
                 <td>{category}</td>
-                <td>{Math.round(price*95)}</td>
+                <td>{Math.round(price * 95)}</td>
                 <td>
-                  <button onClick={(del)}>Delete</button>
+                  <button onClick={()=>del(id)}>Delete</button>
                 </td>
               </tr>
             );
@@ -67,4 +75,3 @@ const Cart = () => {
 };
 
 export default Cart;
-

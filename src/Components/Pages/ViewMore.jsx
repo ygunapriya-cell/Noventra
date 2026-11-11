@@ -8,6 +8,11 @@ const ViewMore = () => {
   const prodid = params.id;
 
   const location = useLocation()
+  const navi = useNavigate()
+  const close = () => {
+     bool ? navi("/adminprotal/product") : navi('/usersprotal/product');
+     toast.info("All products")
+  };
   const bool = location.pathname.startsWith('/adminprotal/')
 
   const [product, setProduct] = useState({});
@@ -24,11 +29,7 @@ const ViewMore = () => {
 
   let {id,  title, price, image, rating, category, description } = product;
 
-  const navi = useNavigate();
-  const close = () => {
-     bool ? navi("/adminprotal/product") : Navigate('/usersprotal/product');
-     toast.info("All products")
-  };
+  
  
   let deleteproduct = async (id) => {
     let bool = window.confirm(`Do you want to delete this item ? `)

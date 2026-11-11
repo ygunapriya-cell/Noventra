@@ -139,12 +139,23 @@
       a {
         text-decoration: none;
         color: white;
-
+        font-size: large;
         &:hover {
           text-decoration: underline;
         }
       }
+      display: flex;
+      justify-content: space-between;
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: large;
+        a {
+
+        }
+      }
     }
+
   }
 }
 
@@ -202,6 +213,7 @@
     width: 40%;
     display: flex;
     align-items: center;
+
     img {
       margin-left: 3vw;
       width: 7vw;
@@ -1473,19 +1485,20 @@ hopmoree {
 /* usersregister */
 
 .regsiter {
-  
-  .hesder{
+
+  .hesder {
     h1 {
-    text-align: center;
-    margin-top: 5vh;
-   }
-  button{
-    background-color: #10b981;
-    color: white;
-    border-radius: 10px;
-    height: 20px;
-    width: 10%;
-  }
+      text-align: center;
+      margin-top: 5vh;
+    }
+
+    button {
+      background-color: #10b981;
+      color: white;
+      border-radius: 10px;
+      height: 20px;
+      width: 10%;
+    }
 
   }
 
@@ -1526,7 +1539,8 @@ hopmoree {
           font-weight: bold;
           background-color: #cdfaeb8f;
           border: none;
-          &:focus{
+
+          &:focus {
             background-color: white;
           }
         }
@@ -1559,8 +1573,8 @@ hopmoree {
 
 /* RegisteredUsers* */
 
-.registered-users{
-  .container{
+.registered-users {
+  .container {
     width: 100%;
     height: 100%;
     padding-right: 50%;
@@ -1568,29 +1582,26 @@ hopmoree {
     padding-top: 10%;
     row-gap: 20%;
 
-    table{
+    table {
       background-color: #059669;
       color: black;
-       justify-content: center;
-     
+      justify-content: center;
+
       margin-top: 20px;
-     
 
-      thead{
+
+      thead {
         margin: auto;
-        
-        tr{
-           align-items: center;
-          th{
-           
-            
 
-          }
+        tr {
+          align-items: center;
+
+          th {}
         }
       }
     }
   }
-} 
+}
 
 
 /* Registered Users Page */
@@ -1677,26 +1688,25 @@ hopmoree {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .registered-users {
-        padding: 20px 10px;
-    }
+  .registered-users {
+    padding: 20px 10px;
+  }
 
-    .registered-users .container {
-        padding: 12px;
-    }
+  .registered-users .container {
+    padding: 12px;
+  }
 
-    .registered-users th,
-    .registered-users td {
-        padding: 10px 8px;
-        font-size: 12px;
-    }
+  .registered-users th,
+  .registered-users td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
 }
 
 
-.cart{
-  h1{
+.cart {
+  h1 {}
 
-  }
   table {
     border: none;
     width: 80%;
@@ -1706,38 +1716,46 @@ hopmoree {
     margin-bottom: 10vh;
     box-shadow: 0 0 50px rgba(8, 146, 193, 0.984);
     font-size: larger;
+
     td,
     th {
       padding: 2vh 1vw;
     }
+
     thead {
       background-color: rgba(8, 146, 193, 0.984);
       color: aliceblue;
-      tr{
-        td{
+
+      tr {
+        td {
           font-weight: bold;
           font-size: 20px;
         }
       }
     }
+
     tbody {
       tr:nth-child(even) {
         background-color: rgba(8, 147, 193, 0.14);
       }
+
       tr {
         td {
           button {
             border: none;
             background: none;
             cursor: pointer;
+
             &:hover {
               transform: scale(0.9);
             }
+
             &:active {
               color: aqua;
             }
           }
         }
+
         .image {
           img {
             height: 20vh;
@@ -1747,7 +1765,8 @@ hopmoree {
       }
     }
   }
-  h3{
+
+  h3 {
     text-align: end;
     margin-right: 19vw;
     font-size: 30px;

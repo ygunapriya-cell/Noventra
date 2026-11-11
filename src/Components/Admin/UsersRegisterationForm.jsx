@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const UsersRegisterationForm = () => {
@@ -8,7 +8,9 @@ const UsersRegisterationForm = () => {
   let [usersdata, setusersdata] = useState([]);
   let errmz = useRef();
   let navigate = useNavigate();
-
+  let location = useLocation();
+  let bool1 = location.pathname.startsWith('/portalregister')
+  
    // todo : API fetching  of users
   let fetchapi = async () => {
     let usersapi = await axios.get(`http://localhost:4000/users`);
@@ -68,19 +70,20 @@ const UsersRegisterationForm = () => {
           Password: "",
           DOb: "",
           place: "",
-        });
-         navigate(`/adminprotal/usersdetalies`)
+        });      
+          navigate(`/adminprotal/usersdetalies`)
       }
     } catch (error) {
       toast.error(`Users is not registered : ${error}`);
     }
   };
+   
   return (
     <>
       <div className="regsiter">
        <div className="hesder">
          <h1>Registeration Form</h1>
-         <button onClick={()=>navigate(`/adminprotal/usersdetalies`)}>
+         <button onClick={()=>{ bool1 ? navigate(`/registeduser`) : navigate(`/adminprotal/usersdetalies`)}}>
           Registered Users
            </button>
        </div>
